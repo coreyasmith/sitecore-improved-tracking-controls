@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{8DE6
 		.env = .env
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		src\Project\Common\sitecore\App_Config\Environment\CoreyAndRick.Project.Common.Dev.config = src\Project\Common\sitecore\App_Config\Environment\CoreyAndRick.Project.Common.Dev.config
 		docker-compose.yml = docker-compose.yml
 		NuGet.config = NuGet.config
 		PublishSettings.Sitecore.targets = PublishSettings.Sitecore.targets
