@@ -21,6 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{26C1EA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreyAndRick.Project.Common", "src\Project\Common\sitecore\CoreyAndRick.Project.Common.csproj", "{202947F8-44C8-4EA3-BB43-2DED901309A7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{FB55604C-F191-4B24-B79E-90F63260166B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{CB726328-7CC0-4B89-A28C-72CA287237F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreyAndRick.Foundation.Serialization", "src\Foundation\Serialization\sitecore\CoreyAndRick.Foundation.Serialization.csproj", "{06CBF6AB-5261-4858-887D-6D299919C99B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +40,12 @@ Global
 		{202947F8-44C8-4EA3-BB43-2DED901309A7}.Docker|Any CPU.Build.0 = Docker|Any CPU
 		{202947F8-44C8-4EA3-BB43-2DED901309A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{202947F8-44C8-4EA3-BB43-2DED901309A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CBF6AB-5261-4858-887D-6D299919C99B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CBF6AB-5261-4858-887D-6D299919C99B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CBF6AB-5261-4858-887D-6D299919C99B}.Docker|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CBF6AB-5261-4858-887D-6D299919C99B}.Docker|Any CPU.Build.0 = Debug|Any CPU
+		{06CBF6AB-5261-4858-887D-6D299919C99B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CBF6AB-5261-4858-887D-6D299919C99B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +53,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{26C1EAAF-2E7B-4E72-96A4-3A6F2064ECA5} = {83BF98DD-F75E-40D3-9F4B-B822C21AC0F9}
 		{202947F8-44C8-4EA3-BB43-2DED901309A7} = {26C1EAAF-2E7B-4E72-96A4-3A6F2064ECA5}
+		{CB726328-7CC0-4B89-A28C-72CA287237F2} = {FB55604C-F191-4B24-B79E-90F63260166B}
+		{06CBF6AB-5261-4858-887D-6D299919C99B} = {CB726328-7CC0-4B89-A28C-72CA287237F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8225656E-FAA4-4FDA-B7F1-30738E688AD9}
