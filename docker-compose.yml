@@ -103,6 +103,7 @@ services:
       - "44001:80"
     volumes:
       - .\docker\data\cm:C:\src
+      - .\serialization:C:\Projects\Sitecore\sitecore-improved-tracking-controls\serialization
     environment:
       SITECORE_LICENSE: ${SITECORE_LICENSE}
       SITECORE_APPSETTINGS_ROLE:DEFINE: Standalone

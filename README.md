@@ -28,9 +28,17 @@ and Marketing Experience_ presentation.
 5. All projects in the solution will be automatically published to Sitecore on
    build courtesy of [Helix Publishing Pipeline][3].
 
+## 💡 Notes
+
+- This repository contains Sitecore Support patch [`Sitecore.Support.205766`][7]
+  to fix an issue with the built-in `TreeList` control. Please see the
+  [`README.md` with that patch][8] for more information.
+
 [1]: https://twitter.com/Sitecordial
 [2]: https://github.com/sitecore/docker-images
 [3]: https://github.com/richardszalay/helix-publishing-pipeline
 [4]: https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/93/Sitecore_Experience_Platform_93_Initial_Release.aspx
 [5]: PublishSettings.Sitecore.targets
 [6]: src/Project/Common/sitecore/App_Config/Environment/CoreyAndRick.Project.Common.Dev.config
+[7]: https://github.com/SitecoreSupport/Sitecore.Support.205766
+[8]: lib/README.md

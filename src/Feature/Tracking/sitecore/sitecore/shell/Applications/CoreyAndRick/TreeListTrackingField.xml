@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<control xmlns:def="Definition"
+         xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+         xmlns:fixcontent="http://www.sitecore.net/fixcontent">
+  <TreeListTrackingField>
+    <FormDialog ID="Dialog"
+                Header="Attributes"
+                Text="Select the campaigns, events, or failure actions that you want to associate with the selected item."
+                Icon="Office/24x24/megaphone.png">
+      <script type="text/javascript" language="javascript">
+        function scToggle(id) {
+          var element = $("profile_" + id);
+          var checked = element.checked;
+          var panel = $("profile_panel_" + id);
+
+          panel.disabled = !checked;
+          panel.descendants().each(function(element) { element.disabled = !checked });
+        }
+      </script>
+      <Stylesheet>
+        .scMemo {
+          width: 100%;
+          height: 120px;
+        }
+
+        .scCampaignContainer {
+          padding: 0 0 10px 0;
+        }
+
+        .scContentControl {
+          height: 100%;
+        }
+      </Stylesheet>
+
+      <CodeBeside Type="CoreyAndRick.Feature.Tracking.sitecore.shell.Applications.CoreyAndRick.TreeListTrackingField, CoreyAndRick.Feature.Tracking"/>
+
+      <Tabstrip ID="Tabstrip">
+        <Tab Header="Campaigns">
+          <fixcontent:TreeList ID="CampaignsList"
+                               Activation="false" />
+        </Tab>
+        <Tab Header="Events">
+          <fixcontent:TreeList ID="EventsList"
+                               Activation="false" />
+        </Tab>
+        <Tab Header="Failure Actions">
+          <fixcontent:TreeList ID="FailuresList"
+                               Activation="false" />
+        </Tab>
+        <Tab Header="Settings">
+          <GridPanel class="scStretch">
+            <div>
+              <Checkbox ID="Ignore"
+                        Header="Disable analytics for this page" />
+            </div>
+            <Border GridPanel.Style="height:100%"
+                    Height="100%"
+                    Padding="7px 7px 7px 0px">
+              <Literal Text="If you disable analytics for this page, Sitecore will not register information when visitors access this page." />
+            </Border>
+          </GridPanel>
+        </Tab>
+      </Tabstrip>
+    </FormDialog>
+  </TreeListTrackingField>
+</control>

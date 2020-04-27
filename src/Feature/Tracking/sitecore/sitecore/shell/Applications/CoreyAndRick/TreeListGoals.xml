@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<control xmlns:def="Definition"
+         xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense"
+         xmlns:fixcontent="http://www.sitecore.net/fixcontent">
+  <TreeListGoals>
+    <FormDialog ID="Dialog"
+                Header="Goals"
+                Text="Select the goals that you want to associate with the selected item."
+                Icon="People/32x32/flag_checkered.png">
+      <Stylesheet>
+        .scContentControl {
+          height: 100%;
+        }
+      </Stylesheet>
+
+      <CodeBeside Type="CoreyAndRick.Feature.Tracking.sitecore.shell.Applications.CoreyAndRick.TreeListGoals, CoreyAndRick.Feature.Tracking"/>
+
+      <fixcontent:TreeList ID="TreeList"
+                           Activation="false" />
+    </FormDialog>
+  </TreeListGoals>
+</control>
