@@ -4,6 +4,17 @@ This repository contains code for the improved tracking controls that
 [Rick Bauer][1] and I demonstrated in our _Crank Up Your Sitecore Authoring
 and Marketing Experience_ presentation.
 
+These improved controls make it easier for marketers to manage large sets of
+goals, campaigns, page events, and failures.
+
+The improved goal selector is pictured on the right, stock selector on the left:
+
+![Improved goal selector](docs/goals-selector.png)
+
+And the improved attributes selector is on the right, with stock on the left:
+
+![Improved page attributes selector](docs/attributes-selector.png)
+
 ## 🏗️ Setup
 
 ### 🐳 Docker
