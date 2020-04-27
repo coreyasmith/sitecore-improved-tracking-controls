@@ -66,6 +66,9 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\CoreyAndRick.Feature.Tracking.config" />
     <Content Include="App_Config\Include\Feature\Sitecore.Support.205766.config" />
+    <Content Include="sitecore\shell\client\Sitecore\ExperienceEditor\Commands\OpenAttributes.js" />
+    <Content Include="sitecore\shell\client\Sitecore\ExperienceEditor\Commands\OpenGoals.js" />
+    <Content Include="sitecore\shell\client\Sitecore\ExperienceEditor\Pipelines\OpenTrackingField\OpenTrackingField.OpenDialog.js" />
     <Content Include="sitecore\shell\Applications\CoreyAndRick\TreeListGoals.xml" />
     <Content Include="sitecore\shell\Applications\CoreyAndRick\TreeListTrackingField.xml" />
     <None Include="Web.config" />
