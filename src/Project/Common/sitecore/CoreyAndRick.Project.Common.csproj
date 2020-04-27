@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -41,6 +41,22 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <!-- Helix Publishing Pipeline -->
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    <PublishProfile Condition="'$(Configuration)' == 'Debug'">Local</PublishProfile>
+    <PublishProfile Condition="'$(Configuration)' == 'Docker'">Docker</PublishProfile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoPublish Condition="'$(AutoPublish)' == '' and '$(BuildingInsideVisualStudio)' == 'true' and '$(PublishProfile)' != ''">true</AutoPublish>
+    <AutoPublishDependsOn Condition="'$(AutoPublish)' == 'true'">
+      $(AutoPublishDependsOn);
+      WebPublish
+    </AutoPublishDependsOn>
+  </PropertyGroup>
+  <Target Name="AutoPublish" AfterTargets="Build" DependsOnTargets="$(AutoPublishDependsOn)">
+  </Target>
+  <!-- /Helix Publishing Pipeline -->
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -85,6 +101,9 @@
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
       <Version>2.0.1</Version>
     </PackageReference>
+    <PackageReference Include="RichardSzalay.Helix.Publishing.WebRoot">
+      <Version>1.5.6</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
@@ -122,7 +141,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
