@@ -51,3 +51,11 @@
 #*.props     merge=binary
 #*.filters   merge=binary
 #*.vcxitems  merge=binary
+
+###############################################################################
+# GitHub syntax highlighting
+###############################################################################
+
+*.config           linguist-language=XML
+*.config.disabled  linguist-language=XML
+*.config.example   linguist-language=XML
